@@ -1,0 +1,43 @@
+{% extends "./base.html" %}
+{% block content %}
+
+<main>
+
+<div class="text-center py-5">
+  <h1　class=”mb-5”> 投稿の詳細</h1>
+</div>
+
+
+<section>
+
+
+<div class = "container">
+
+<div>
+  <a href="{% url "posts:index" %}" class="bg-light">投稿の一覧</a>
+</div>
+  <div class="py-2">
+
+  <h1 class="bg-info text-white">{{post.title}} </h1>  
+  </div>
+
+  <div class="py-2 badge badge-dark badge-pill" >
+        {{ post.published }}
+  </div>
+
+  <div class="py-2 text-center">
+    <img src="{{ post.image.url }}" class = "img-fluid rounded" style = "max-height: 300px;" />
+  </div>
+
+  <div class="bg-light p-5 mb-5">
+    
+      {{post.body_to_markdown | safe }}
+    
+  </div>
+</div>
+
+
+</section>
+</main>
+
+{% endblock %}

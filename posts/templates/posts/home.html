@@ -1,0 +1,30 @@
+{% extends "./base.html" %}
+{% block content %}
+
+<main>
+
+ <br></br>
+ {% load static %}
+ <img src = "{% static "posts/home.JPG" %}" class = "img-fluid rounded mx-auto d-block" style = "max-height: 200px;" />
+
+ <hr>
+
+ <h3 class = bg-success>最新の投稿にゃ</h3>
+
+ {% for post in posts.all%}
+<section class ="py-5 text-center">
+
+  <a href = "{% url "post_detail" post.id %}" class="btn btn-primary btn-md">  {{post.title}} </a>
+    <br ><br />
+    {{ post.published }}
+    <br ><br />
+    <img src="{{ post.image.url }}" class = "img-fluid rounded" style = "max-height: 200px;" />
+    <br /><br />
+    {{post.summary}}
+    <br ><br />
+</section>
+ {% endfor %}
+
+</main>
+
+{% endblock %}

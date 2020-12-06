@@ -1,0 +1,103 @@
+{% extends "./base.html" %}
+{% block content %}
+{%load static %}
+<main>
+ <section class="py-5">
+   <h2 class ="text-center mb-5">プロフィール</h2>
+
+   <div class="container py-5">
+     <div class="row">
+
+
+     <div class="col-sm-6">
+       <img src = "{% static "posts/IMG_4022.JPG" %}"  class = "img-fluid rounded-circle" style = "max-height: 200px;" />
+     </div>
+     <div class="col-sm-6">
+        <ul>
+          <li>名前：Shimmyo Tetsu 新名　哲</li>
+          <li>出身：埼玉県</li>
+          <li>学歴：東北大学大学院　環境科学研究科</li>
+          <li>専攻：応用化学、資源循環</li>
+          <li>仕事：新規触媒開発、シミュレーションの構築運用</li>
+
+          <li></li>
+        </ul>
+     </div>
+     </div>
+    </div>
+
+
+ </section>
+
+
+
+
+<section class="bg-light text-center py-5">
+
+  <h2 >engineer skill?</h2>
+  <div class="container pb-5" > 
+    <table class="table table-hover">
+      <thead>
+        <tbody>
+          <tr><td>言語</td><td>python</td><td></td></tr>
+          <tr><td>Flame Work</td><td>Django</td><td>keras</td></tr>
+          <tr><td>others</td><td>Flask</td><td>heroku</td><td></td></tr>
+
+        </tbody>
+      </thead>
+
+    </table>
+  </div>
+  
+    <h2 >other skill?</h2>
+    <div class="container pb-5">
+      <table class="table table-hover">
+        <thead>
+          <tbody>
+            <tr><td>化学</td><td>触媒</td><td>石油化学</td></tr>
+            <tr><td>無機化学</td><td>水処理</td><td>新規触媒開発</td></tr>
+            <tr><td>化学工学</td><td>エネルギー</td></tr>
+
+          </tbody>
+        </thead>
+
+      </table>
+
+     </div>
+
+     
+
+<div class="py-5">
+  <h2>product</h2>
+  <figure class="imghvr-hinge-left">
+      <img src = "{% static "posts/product.jpeg" %}" style = "max-height: 200px;">
+      <figcaption>
+          <a href="../product.html" class="text-white my-5">-- to product --</a>
+      </figcaption>
+  </figure>
+     
+</div>
+
+<h2 class="py-5">hobby</h2>
+     <div class="container pb-5" >
+       <table class="table table-hover">
+         <thead>
+           <tbody>
+             <tr><td>野球</td><td>バスケットボール</td><td>猫</td></tr>
+             <tr><td>ゲーム</td><td>漫画</td><td>ビール</td></tr>
+             <tr><td colspan="3" class="text-align-all:start" >国内、海外旅行
+
+             </td></tr>
+ 
+           </tbody>
+         </thead>
+ 
+       </table>
+ 
+      </div>
+
+</section>
+
+</main>
+
+{% endblock %}

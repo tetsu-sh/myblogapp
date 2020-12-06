@@ -1,0 +1,309 @@
+{% extends "./base.html" %}
+{% block content %}
+{% load static %}
+<main >
+
+
+  
+
+  <h2 class ="text-center my-5">制作物</h2>
+
+
+<section class="bg-light py-2">
+  <div class="container">
+    <table class="table table-hover">
+      <!--1-->
+      <thead my-5>
+        <tr>
+          <th scope="col" colspan="2" class="bg-success text-white">・Djangoでブログ</th>
+        </tr>
+        <tr>
+            <th scope="col"　class style="min-width: 200px">カテゴリ</th>
+            <th scope="col">詳細</th>
+        </tr>
+        
+      </thead>
+        <tbody>
+
+          <tr>
+            <th>内容</th>
+            <td>このブログ </td>
+          </tr>
+          <tr>
+            <th>使用要素</th>
+            <td>
+              <li>Django</li>
+              <li>AWS</li>
+              <li>nginx,gunicorn</li>
+              <li>html,css,bootstrap</li>
+            </td>
+          </tr>
+          <tr>
+            <th>説明</th>
+            <td>djangoでブログをし、AWSを活用して構築
+                基本的なindexページ、aboutページ、productページで構成
+                投稿やproductで技術的な記載をしているポートフォリヲブログと化した
+            </td>
+          </tr>
+          <tr>
+            <th>link</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>今後</th>
+            <td>javascriptを使って飾りつけたい</td>
+          </tr>
+        </tbody>
+      <!--2-->
+        <thead my-5>
+            <tr>
+              <th scope="col" colspan="2" class="bg-success text-white">・beer-recome Flaskで機械学習アプリ</th>
+            </tr>
+            <tr>
+                <th scope="col"　class style="min-width: 200px">カテゴリ</th>
+                <th scope="col">詳細</th>
+            </tr>
+            
+          </thead>
+            <tbody>
+    
+              <tr>
+                <th>内容</th>
+                <td>ビールの度数と苦味を入れるとオススメのクラフトビールを勧めてくれる </td>
+              </tr>
+              <tr>
+                <th>使用要素</th>
+                <td>
+                  <li>Flask</li>
+                  <li>sklearn</li>
+                  <li>pandas,numpy</li>
+                  <li>heroku</li>
+                  
+                </td>
+              </tr>
+              <tr>
+                <th>説明</th>
+                <td>Kaggleに転がっているビールのレシピデータからsklearn,k-近傍法にてモデルを作成。
+                   Flaskでは度数と苦味から、モデルを読み込み最も好みに近い５つのビールを勧めてくれる
+                   herokuでデプロイ
+                </td>
+              </tr>
+                <tr>
+                    <th>link</th>
+                    <td>
+                        <li><a href="https://blooming-plateau-41331.herokuapp.com">ビール</a></li>
+                    </td>
+                  </tr>
+              <tr>
+                  <th>今後</th>
+                  <td>
+                    入力値をもう少し増やしたい
+                  </td>
+                
+              </tr>
+            </tbody>
+
+
+                  <!--3-->
+        <thead my-5>
+            <tr>
+              <th scope="col" colspan="2" class="bg-success text-white">・smoke_map</th>
+            </tr>
+            <tr>
+                <th scope="col"　class style="min-width: 200px">カテゴリ</th>
+                <th scope="col">詳細</th>
+            </tr>
+            
+          </thead>
+            <tbody>
+    
+              <tr>
+                <th>内容</th>
+                <td>喫煙所を登録する。　喫煙所がなかなか見つからなくて困ることがある </td>
+              </tr>
+              <tr>
+                <th>使用要素</th>
+                <td>
+                  <li>Django</li>
+                  <li>汎用ビュー</li>
+                  <li>heroku db postgresql</li>
+                  <li>スクレイピング</li>
+                  
+                </td>
+              </tr>
+              <tr>
+                <th>説明</th>
+                <td>
+                  汎用ビューを割と活用して作成した。
+                  login画面、logout,sighup認証システムも導入
+                  かつloginしていないと作成、編集、削除ができない
+                  データがないため、ドトールの店舗情報をスクレイピングし、DB操作してINSERTして、
+                  ぱっと見のデータを増やした。
+
+                </td>
+              </tr>
+              <tr>
+                  <th>link</th>
+                  <td>
+                      <li><a href="https://sleepy-meadow-56572.herokuapp.com/smoke/home/">smokemap</a></li>
+                  </td>
+                </tr>
+            <tr>
+                <th>今後</th>
+                <td>
+                  データ増やしたい
+                  検索昨日を付与したい
+                </td>
+              
+            </tr>
+            </tbody>
+
+ <!--4-->
+ <thead my-5>
+    <tr>
+      <th scope="col" colspan="2" class="bg-success text-white">animalai by flask</th>
+    </tr>
+    <tr>
+        <th scope="col"　class style="min-width: 200px">カテゴリ</th>
+        <th scope="col">詳細</th>
+    </tr>
+    
+  </thead>
+    <tbody>
+
+      <tr>
+        <th>内容</th>
+        <td>動物の画像をアップロードするとなんの動物か判定してくれる。ただしカラス、さる、チワワ、イノシシである </td>
+      </tr>
+      <tr>
+        <th>使用要素</th>
+        <td>
+          <li>Tensorflow,keras</li>
+          <li>CNN</li>
+          <li>flask</li>
+          
+          
+        </td>
+      </tr>
+      <tr>
+        <th>説明</th>
+        <td>
+          画像をAPI収集する。収集した画像を回転、反転させaugumentさせる。
+          kerasを用いてCNNにてモデルを作成してFlaskアプリ化
+        </td>
+      </tr>
+      <tr>
+          <th>link</th>
+          <td>
+              <li><a href="https://fathomless-fortress-71669.herokuapp.com/">animal ai</a></li>
+          </td>
+        </tr>
+    <tr>
+        <th>今後</th>
+        <td>
+          モデルの精度がよくない。　ねこの模様判定バージョンにしてVGGを転移学習させたバージョンにする。
+        </td>
+      
+    </tr>
+    </tbody>
+
+<!--5-->
+<thead my-5>
+  <tr>
+    <th scope="col" colspan="2" class="bg-success text-white">寒暖に気をつけろbot</th>
+  </tr>
+  <tr>
+      <th scope="col"　class style="min-width: 200px">カテゴリ</th>
+      <th scope="col">詳細</th>
+  </tr>
+  
+</thead>
+  <tbody>
+
+    <tr>
+      <th>内容</th>
+      <td>明日が寒くなる、もしくは暖かくなる時のみ気温差を教えてくれるbot </td>
+    </tr>
+    <tr>
+      <th>使用要素</th>
+      <td>
+        <li>tweet bot</li>
+        <li>スクレイピング</li>
+        <li>heroku scheduler</li>
+        
+        
+      </td>
+    </tr>
+    <tr>
+      <th>説明</th>
+      <td>
+        今日と明日の気温を取得し、その差が一定以上の時のみtweetする。heroku schedulによって毎日実行し、１８時に知らせてくれる。
+        差がないときは何もしない。
+      </td>
+    </tr>
+    <tr>
+        <th>link</th>
+        <td>
+            <li><a href="{% url "post_detail" 6 %}">twitter bot 投稿へ</a></li>
+        </td>
+      </tr>
+  <tr>
+      <th>今後</th>
+      <td>
+        コードを綺麗にする。　秋冬、冬春対応だけなので、夏も考慮したものにする。
+      </td>
+    
+  </tr>
+  </tbody>
+   
+
+ 
+
+
+    </table>
+
+  </div>
+
+</section>
+
+<div class="m-5">
+    <li>Django tutorial pollsアプリ</li>
+    <p>おざなりになっていた部分の理解や管理画面のカスタマイズの知識が高まった</p>
+    <p>デプロイは無し</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="m-5">
+    <h3>linkまとめ</h3>
+    <li>
+        <a href="https://twitter.com/tetsu04228" class="rounded-circle" >
+          <i class="fab fa-twitter">
+          </i>
+          twitter
+        </a>
+    </li>
+  
+    
+    
+    <li><a href="https://qiita.com/tetsu-sh"><i class="fas fa-tv"></i>Qiita</a></li>
+    <li><a href="https://github.com/tetsu-sh">
+      <i class="fab fa-github"></i>
+      Github</a></li>
+    
+</div>
+
+
+
+
+<!-- twiiter qiita gitthub -->
+
+</main>
+{% endblock %}

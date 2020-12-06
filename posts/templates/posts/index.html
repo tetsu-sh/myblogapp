@@ -1,0 +1,37 @@
+{% extends "./base.html" %}
+{% block content %}
+
+<div class = "cover text-center py-5">
+  <h1 class = "heading dispaly-4 mb-4 " >welcome!</h1>
+</div>
+
+<main>
+
+ <br></br>
+ {% load static %}
+
+
+ 
+
+ <h3 class ="bg-success px-5">最新の投稿</h3>
+
+ {% for post in posts.all%}
+<section class ="py-5 text-center">
+
+  <a href = "{% url "post_detail" post.id %}" class="btn btn-info btn-md js-scroll-trigger p-3 px-5 ">  {{post.title}} </a>
+    <br ><br />
+    <div class="py-2 badge badge-dark badge-pill">
+      {{ post.published }}
+    </div>
+    
+    <br ><br />
+    <img src="{{ post.image.url }}" class = "img-fluid rounded" style = "max-height: 200px;" />
+    <br /><br />
+    {{post.summary | safe}}
+    <br ><br />
+</section>
+ {% endfor %}
+
+</main>
+
+{% endblock %}
